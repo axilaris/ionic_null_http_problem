@@ -1,0 +1,99 @@
+/* Empty. Add your own CSS if you like */
+.float-button {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  width: 30px;
+  padding: 30px;
+  font-size: 30px;
+  background: $warning;
+  position: fixed;
+  bottom: 40px; /* Adjust to where you want it */
+  right: 8px; /* Adjust to where you want it */
+  z-index: 9999;
+}
+
+.float-button .height_fix {
+  margin-top: 100%;
+}
+
+.float-button .content {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  margin-top: -20px; /* Note, this must be half the font size */
+  color: gray;
+}
+
+.inner {
+  display: inline-block;
+  vertical-align: middle;
+}
+.inner1 {
+  display: inline-block;
+  vertical-align: middle;
+  float: right;
+  margin-top: 6px;
+}
+
+.div1, .div2 {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.div1 {
+	vertical-align: middle;
+}
+
+.div2 {
+	float: right;
+	vertical-align: middle;
+}
+
+/* chat stuff */
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.image-loader-container {
+  position: fixed; /* or absolute */
+  top: 50%;
+  left: 50%;
+ 
+}
+
+/* dashboard header image and text block design */
+.image
+{
+  position: relative;
+  width: 100%; /* for IE 6 */
+}
+
+.image h2
+{
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  color: #fff;
+}
+
+.image span
+{
+  float: left;
+  clear: left;
+  color: white;
+  font: bold 24px/45px Helvetica, Arial, Sans-Serif;
+  letter-spacing: -1px;
+  background: rgb(0, 0, 0); /* fallback color */
+  background: rgba(0, 0, 0, 0.7);
+  padding: 0px 10px;
+}

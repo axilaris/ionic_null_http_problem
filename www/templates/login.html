@@ -1,0 +1,31 @@
+<ion-view view-title="Login" name="login-view">
+  <ion-content class="padding">
+
+    <br>
+
+    <center><span class="badge badge-dark"></span></center>
+    
+    <br>
+
+    <div class="card">
+
+      <label class="item item-input">
+        <i class="icon ion-person placeholder-icon"></i>
+        <input type="text" autocorrect="none" autocapitalize="none" placeholder="Username" ng-model="data.username">
+      </label>
+      <label class="item item-input">
+        <i class="icon ion-locked placeholder-icon"></i>
+        <form ng-submit="login()">
+          <input type="password" placeholder="Password" ng-model="data.password">
+        </form>
+      </label>
+    </div>
+
+
+    <button class="button button-block button-calm" ng-click="login()">
+      Login
+    </button>
+
+
+  </ion-content>
+</ion-view>
