@@ -82,14 +82,39 @@ angular.module('starter.controllers', [])
     var req = {
       method: 'POST',
       url: baseURL,
-      data: postObject,
-      //timeout: 5000
+      data: postObject
     };
 
     // $timeout(function() {
     //   deferred.resolve(); // this aborts the request!
     // }, 5000);
 
+// code change
+$http.post(baseURL, postObject).then(function successCallback(response) {
+  // this callback will be called asynchronously
+  // when the response is available
+
+      console.log('Success', response);
+      // resp.data contains the result
+
+/*      
+      //window.localStorage['username'] = resp.user.username;
+      window.localStorage['username'] = "theusername";
+ 
+      //clear form
+      $scope.data.username = "";
+      $scope.data.password = "";
+*/
+      // go to dashboard page on success
+      $state.go('app.dashboard');
+
+}, function errorCallback(response) {
+  // called asynchronously if an error occurs
+  // or server returns response with an error status.
+  console.error('ERROR', response);
+});
+
+/* ORIGINAL
     $http(req).success(function(resp) {
       console.log('Success', resp);
       // resp.data contains the result
@@ -135,6 +160,9 @@ angular.module('starter.controllers', [])
       }
 
     })
+*/
+
+
   }
 
 
