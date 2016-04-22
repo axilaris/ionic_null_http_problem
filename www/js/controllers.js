@@ -41,6 +41,23 @@ angular.module('starter.controllers', [])
   $scope.login = function() {
     //var deferred = $q.defer();
 
+
+
+            if(window.Connection) {
+                if(navigator.connection.type == Connection.NONE) {
+                    $ionicPopup.confirm({
+                        title: "Internet Disconnected",
+                        content: "The internet is disconnected on your device."
+                    })
+                    .then(function(result) {
+                        if(!result) {
+                            ionic.Platform.exitApp();
+                        }
+                    });
+                }
+            }
+
+/*
     if (window.cordova){
       if ($cordovaNetwork.isOffline()){
         var alertPopup = $ionicPopup.alert({
@@ -49,7 +66,7 @@ angular.module('starter.controllers', [])
         return;
       }
     }
-
+*/
 
 
     var postObject = new Object();
