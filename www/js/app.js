@@ -7,7 +7,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'ngCordova', 'ngSanitize', 'starter.controllers', 'starter.services', 'starter.directives', 'chart.js', 'onezone-datepicker', 'ionic-timepicker', 'btford.socket-io', 'pasvaz.bindonce'])
+angular.module('starter', ['ionic', 'ngCordova', 'ngSanitize', 'starter.controllers', 'starter.services', 'starter.directives'])
 
 .run(function($ionicPlatform, $rootScope, $ionicPopup) {
   $ionicPlatform.ready(function() {
@@ -22,7 +22,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'ngSanitize', 'starter.controll
     }
 
 
-
+/*
     // Check for network connection
     if(window.Connection) {
       if(navigator.connection.type == Connection.NONE) {
@@ -36,6 +36,9 @@ angular.module('starter', ['ionic', 'ngCordova', 'ngSanitize', 'starter.controll
         });
       }
     }
+*/
+
+
   });
 })
 
@@ -104,7 +107,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'ngSanitize', 'starter.controll
   $urlRouterProvider.otherwise('/login');
 
   //Enable cross domain calls
-  $httpProvider.defaults.useXDomain = true;
+// xxx  $httpProvider.defaults.useXDomain = true;
 
   //align page title to center
   $ionicConfigProvider.navBar.alignTitle('center');

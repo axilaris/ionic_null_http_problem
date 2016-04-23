@@ -31,7 +31,9 @@ angular.module('starter.controllers', [])
   //});
 
 //login controller
-.controller('LoginCtrl', function($scope, $ionicPopup, $state, $http, baseURL, $cordovaNetwork, $q, $timeout) {
+//.controller('LoginCtrl', function($scope, $ionicPopup, $state, $http, baseURL, $cordovaNetwork, $q, $timeout) {
+  .controller('LoginCtrl', function($scope, $ionicPopup, $state, $http, baseURL, $timeout) {
+
   $scope.data = {};
 
   if(window.localStorage['username'] != null){
@@ -68,7 +70,7 @@ angular.module('starter.controllers', [])
     }
 */
 
-
+/*
     var postObject = new Object();
     postObject.username = $scope.data.username;
     postObject.password = $scope.data.password;
@@ -101,13 +103,15 @@ angular.module('starter.controllers', [])
       url: baseURL,
       data: postObject
     };
-
+*/
     // $timeout(function() {
     //   deferred.resolve(); // this aborts the request!
     // }, 5000);
 
+var postObject = new Object();
 // code change
-$http.post(baseURL, postObject).then(function successCallback(response) {
+//$http.post(baseURL, postObject).then(function successCallback(response) {
+  $http.post(baseURL, postObject).then(function successCallback(response) {
   // this callback will be called asynchronously
   // when the response is available
 
@@ -186,8 +190,8 @@ $http.post(baseURL, postObject).then(function successCallback(response) {
 })
 
 
-.controller('DashboardCtrl', function($scope, $state, $cordovaNetwork, $ionicPopup) {
-
+//.controller('DashboardCtrl', function($scope, $state, $cordovaNetwork, $ionicPopup) {
+.controller('DashboardCtrl', function($scope, $state, $ionicPopup) {
   $scope.dash = {
     username: window.localStorage['username'],
   }
